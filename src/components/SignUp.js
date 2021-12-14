@@ -13,11 +13,12 @@ function SignUp(props) {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const authObject = { 'username': userName, 'password': userSecret };
+        const authObject = { 'username': userName, 'password': userSecret, 'birthdate': userBirthday };
         try {
             const resp = await axios.post('http://localhost:4000/users', authObject);
             console.log(resp, 'is resp')
             localStorage.setItem('user', resp.data.user);
+            localStorage.setItem('birthdate', resp.data.birthdate);
             // localStorage.setItem('password', userSecret);
             console.log('user created')
             window.location.reload();

@@ -158,8 +158,16 @@ form {
   margin: 5px;
   width: 100%;
   height: 100%;
+  /* color: black; */
+  background: #62418d;
+  box-shadow: 0px 0px 5px #ffffff;
+}
+
+.navbar-right > .navbar-btn:hover{
+  background: #d6b8fc;
   color: black;
-  background: white;
+  box-shadow: 0px 0px 5px #000000;
+
 }
 
 /********************************************************************* HOMEPAGE STYLES **********************************************************************/
@@ -174,7 +182,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
+  /* grid-template-areas: 
   "year1 year2 year3 year4 year5 year6 year7 year8"
   "year9 year10 year11 year12 year13 year14 year15 year16"
   "year17 year18 year19 year20 year21 year22 year23 year24"
@@ -185,7 +193,7 @@ form {
   "year57 year58 year59 year60 year61 year62 year63 year64"
   "year65 year66 year67 year68 year69 year70 year71 year72"
   "year73 year74 year75 year76 year77 year78 year79 year80"
-  ;
+  ; */
   grid-gap: 5px;
   padding: 0.5rem;
 }
@@ -200,7 +208,7 @@ form {
 .homepage-info {
   height: 10%;
   width: 100%;
-  background: rgba(212, 182, 252, 0.25);
+  background: #d4b6fc40;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -218,7 +226,7 @@ form {
 .homepage-here {
   height: 20px;
   width: 20px;
-  background-color: rgb(100, 73, 134);
+  background-color: #d6b8fc;
   display: flex;
   justify-content: center;
   align-items: center;
