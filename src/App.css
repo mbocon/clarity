@@ -1,38 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  /* border: 1px solid red; */
+}
+
+
+#root {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(90deg, #7554a0 7%, #7554a0 17%, #6a5fa8 29%, #6367ae 44%, #5774b8 66%, #4687c6 83%, #2ca3db 96%, #16bced 100%, #00d4ff 0);
+  height: 100%;
+}
+
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/***************************************************** LOGIN AND SIGNUP STYLES  ****************************************************/
+.wrapper {
+  height: 100%;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.login,
+.signup {
+  width: 75%
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form * {
+  margin: .5rem 0rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 0px;
+  color: black;
+  font-size: 16px;
+}
+
+.center>.button,
+.toggle-btn {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5rem;
+  border: 0px;
+  padding: 0.5rem;
+  color: black;
+  background: white;
+  font-size: 16px;
+}
+
+.center>.button>span,
+.toggle-btn>span {
+  color: black;
+}
+
+.center>.button:hover,
+.toggle-btn:hover {
+  background: #d6b8fc;
+}
+
+.error {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+
+@media (min-width: 600px) {
+
+  .login,
+  .signup {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 800px) {
+
+  .login,
+  .signup {
+    width: 40%;
   }
+
+  .center>.button,
+  .toggle-btn {
+    width: 30%;
+  }
+
+}
+
+@media (min-width: 1000px) {
+
+  .login,
+  .signup {
+    width: 30%;
+  }
+}
+
+/********************************************************************* NAVBAR STYLES **********************************************************************/
+.navbar {
+  width: 100%;
+  height: 10%;
+  background: rgba(212, 182, 252, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar-h1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.navbar-left {
+  display: none;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right>.navbar-btn {
+  font-size: 16px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 0px;
+  margin: 5px;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background: white;
+}
+
+/********************************************************************* HOMEPAGE STYLES **********************************************************************/
+.homepage {
+  width: 100%;
+  height: 100%;
+}
+
+.years {
+  height: 80%;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "year1 year2 year3 year4 year5 year6 year7 year8"
+  "year9 year10 year11 year12 year13 year14 year15 year16"
+  "year17 year18 year19 year20 year21 year22 year23 year24"
+  "year25 year26 year27 year28 year29 year30 year31 year32"
+  "year33 year34 year35 year36 year37 year38 year39 year40"
+  "year41 year42 year43 year44 year45 year46 year47 year48"
+  "year49 year50 year51 year52 year53 year54 year55 year56"
+  "year57 year58 year59 year60 year61 year62 year63 year64"
+  "year65 year66 year67 year68 year69 year70 year71 year72"
+  "year73 year74 year75 year76 year77 year78 year79 year80"
+  ;
+  grid-gap: 5px;
+  padding: 0.5rem;
+}
+
+.year {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  /* margin: auto auto; */
+}
+
+.homepage-info {
+  height: 10%;
+  width: 100%;
+  background: rgba(212, 182, 252, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.homepage-h1 {
+ font-size: 1rem;
+}
+
+.homepage-here-p {
+  display: flex;
+  
+}
+.homepage-here {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(100, 73, 134);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
 }
