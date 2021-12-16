@@ -29,7 +29,7 @@ function HomePage() {
             let age = (otherDate.getFullYear() - birthDate.getFullYear());
 
             if (otherDate.getMonth() < birthDate.getMonth() ||
-                otherDate.getMonth() === birthDate.getMonth() && otherDate.getDate() < birthDate.getDate()) {
+                (otherDate.getMonth() === birthDate.getMonth() && otherDate.getDate() < birthDate.getDate())) {
                 age--;
             }
 
