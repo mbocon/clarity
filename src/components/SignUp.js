@@ -17,7 +17,7 @@ function SignUp(props) {
         try {
             const resp = await axios.post('http://localhost:4000/users', authObject);
             console.log(resp, 'is resp')
-            localStorage.setItem('user', resp.data.user);
+            localStorage.setItem('clarityUser', resp.data.user);
             localStorage.setItem('birthdate', resp.data.birthdate);
             // localStorage.setItem('password', userSecret);
             console.log('user created')
